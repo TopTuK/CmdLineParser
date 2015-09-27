@@ -110,7 +110,8 @@ namespace CmdLineParser
         {
             get
             {
-                return m_params[paramName];
+                if (m_params.ContainsKey(paramName)) return m_params[paramName];
+                else return null;
             }
         }
 

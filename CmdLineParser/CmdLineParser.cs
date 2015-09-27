@@ -170,7 +170,6 @@ namespace CmdLineParser
 
             StringBuilder result = new StringBuilder();
             var optionList = from option in m_optionList
-                                  where option.OptionRequired
                                   orderby option.OptionRequired descending
                                   select new { option.OptionName, option.OptionHelpText };
 
